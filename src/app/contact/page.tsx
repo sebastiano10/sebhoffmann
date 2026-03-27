@@ -22,7 +22,7 @@ const contacts = [
   {
     label: "LinkedIn",
     value: "Sebastian Hoffmann",
-    href: "https://linkedin.com/in/shoffmann85",
+    href: "https://linkedin.com/in/sebhoffm",
     description: "Every job title I've collected since 2004",
     external: true,
   },
