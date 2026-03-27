@@ -33,7 +33,7 @@ export default function Nav() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-sm font-semibold text-[#f0f0f8] tracking-widest uppercase hover:text-[#8b7cf8] transition-colors duration-200"
+          className="font-display text-sm font-bold text-[#f0f0f8] tracking-widest uppercase hover:text-[#00e5a0] transition-colors duration-200"
         >
           Seb Hoffmann
         </Link>
