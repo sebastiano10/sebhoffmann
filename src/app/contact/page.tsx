@@ -38,6 +38,15 @@ export default function ContactPage() {
 
       <div className="relative max-w-5xl mx-auto px-6 py-32 w-full">
         <div className="max-w-xl">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-[#7a8499] hover:text-[#f0f0f8] text-sm transition-colors mb-10"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+            Back
+          </Link>
           <p className="text-[#8b7cf8] text-xs font-semibold tracking-[0.25em] uppercase mb-4">
             Contact
           </p>

@@ -1,157 +1,139 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import LogoGrid from "@/components/LogoGrid";
 
 export const metadata: Metadata = {
-  title: "Seb Hoffmann — Builder, Operator, Investor",
+  title: "Seb Hoffmann — Finance & Growth",
+  description:
+    "I help early-stage startups grow revenue and build the financial infrastructure to sustain it — without two senior hires.",
 };
 
-const projects = [
-  {
-    role: "Co-founder & CFO",
-    title: "Chilli Chan's",
-    description:
-      "Building a premium food brand celebrating authentic Taiwanese pantry staples. Led €0.5M seed financing round.",
-    link: "https://chillichans.com", 
-    linkLabel: "Visit site",
-    external: true,
-  },
-  {
-    role: "Head of Product Growth",
-    title: "Moss",
-    description:
-      "Helped scale Europe's leading spend management platform from €10M to €50M ARR. Led growth across acquisition, activation, and monetisation.",
-    link: "https://getmoss.com",
-    linkLabel: "Visit site",
-    external: true,
-  },
-  {
-    role: "Advisor · Investor",
-    title: "Baseline Ventures",
-    description:
-      "Partnering with early-stage founders on strategy, finance, growth frameworks, and fundraising. Active investor and trader in equities and futures.",
-    link: "/contact",
-    linkLabel: "Get in touch",
-    external: false,
-  },
+const bullets = [
+  "Product-led growth strategy and execution",
+  "Growth analytics, KPIs, and experimentation frameworks",
+  "Financial modelling and cash flow forecasting",
+  "Monthly KPI and investor reporting",
+  "Fundraising prep: data rooms, metrics, pitch narrative",
+  "Hands-on advisory for early founding teams",
 ];
 
 export default function Home() {
   return (
-    <main>
-      {/* ── Hero ── */}
-      <section
-        id="hero"
-        className="relative min-h-screen flex items-center overflow-hidden"
-      >
-        {/* Ambient glow */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-[#8b7cf8]/[0.06] blur-[140px]" />
-          <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-[#8b7cf8]/[0.04] blur-[100px]" />
-        </div>
+    <main className="min-h-screen">
+      <div className="max-w-4xl mx-auto px-6 py-12">
 
-        <div className="relative max-w-5xl mx-auto px-6 py-32 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_340px] gap-12 lg:gap-20 items-center">
-
-            {/* Text */}
+        {/* Header */}
+        <header className="flex items-center justify-between mb-16">
+          <div className="flex items-center gap-4">
+            <Image
+              src="/photo.jpeg"
+              alt="Seb Hoffmann"
+              width={64}
+              height={64}
+              className="rounded-full object-cover object-top shrink-0"
+              priority
+            />
             <div>
-              <p className="fade-up text-[#8b7cf8] text-xs font-semibold tracking-[0.25em] uppercase mb-6">
-                Builder · Operator · Investor
-              </p>
-              <h1 className="fade-up-1 text-5xl sm:text-6xl lg:text-7xl font-bold text-[#f0f0f8] tracking-tight leading-[1.05] mb-6">
-                Seb
-                <br />
-                Hoffmann
+              <h1 className="text-2xl font-bold text-[#f0f0f8]">
+                Seb Hoffmann
               </h1>
-              <p className="fade-up-2 text-[#7a8499] text-lg leading-relaxed max-w-lg mb-10">
-                Co-founder & CFO of{" "}
-                <span className="text-[#f0f0f8]/80">Chilli Chan&apos;s</span>, a food brand bringing
-                authentic Taiwanese pantry staples to the world. Before that,
-                a decade in tech - most recently growing a Series B fintech from
-                €10M to €50M ARR as Head of Product Growth. I advise early-stage founders on finance and
-                growth, and stay close to the markets as an active investor and
-                trader.
+              <p className="text-[#7a8499] text-sm mt-0.5 max-w-sm leading-snug">
+                I help early-stage startups grow revenue and build the financial
+                infrastructure to sustain it — without two senior hires.
               </p>
-              <div className="fade-up-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-[#8b7cf8] text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-[#7c6de8] active:scale-95 transition-all duration-200"
-                >
-                  Get in touch
-                </Link>
-                <a
-                  href="#work"
-                  className="inline-flex items-center gap-2 text-[#7a8499] text-sm hover:text-[#f0f0f8] transition-colors duration-200"
-                >
-                  See my work
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 5v14M5 12l7 7 7-7" />
-                  </svg>
-                </a>
-              </div>
             </div>
-
-            {/* Photo */}
-            <div className="fade-up-4 flex justify-center lg:justify-end">
-              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border border-white/[0.08] bg-[#0d0d1a] shrink-0">
-                <Image src="/photo.jpeg" alt="Seb Hoffmann" fill className="object-cover object-top" priority />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8b7cf8]/[0.08] via-transparent to-transparent pointer-events-none" />
-              </div>
-            </div>
-
           </div>
-        </div>
-      </section>
+          <Link
+            href="/contact"
+            className="shrink-0 ml-6 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-colors text-sm font-medium text-[#f0f0f8]"
+          >
+            Contact me
+          </Link>
+        </header>
 
-      {/* ── Work ── */}
-      <section id="work" className="py-28 sm:py-36 border-t border-white/[0.06]">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="text-[#8b7cf8] text-xs font-semibold tracking-[0.25em] uppercase mb-4">
-            Work
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f0f0f8] tracking-tight mb-16">
-            Selected experience
-          </h2>
+        {/* Service card */}
+        <section className="rounded-2xl border border-white/10 bg-[#0d0d1a] p-8 mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <h2 className="text-xl font-bold text-[#f0f0f8]">
+              Finance &amp; Growth Retainer
+            </h2>
+            <span className="px-3 py-1 rounded-full bg-[#8b7cf8]/10 border border-[#8b7cf8]/20 text-[#8b7cf8] text-xs font-semibold">
+              Available now
+            </span>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {projects.map((project) => (
-              <Link
-                key={project.title}
-                href={project.link}
-                target={project.external ? "_blank" : undefined}
-                rel={project.external ? "noopener noreferrer" : undefined}
-                className="group flex flex-col p-6 rounded-2xl border border-white/[0.07] bg-[#0d0d1a] hover:border-[#8b7cf8]/25 hover:bg-[#0f0f1e] transition-all duration-300"
-              >
-                <p className="text-[#8b7cf8] text-[10px] font-semibold tracking-[0.2em] uppercase mb-3">
-                  {project.role}
-                </p>
-                <h3 className="text-[#f0f0f8] text-xl font-bold mb-3 group-hover:text-white transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-[#7a8499] text-sm leading-relaxed flex-1">
-                  {project.description}
-                </p>
-                <div className="mt-6 flex items-center gap-1.5 text-[#8b7cf8] text-xs font-semibold tracking-wide">
-                  {project.linkLabel}
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-8">
+            {/* What this covers */}
+            <div>
+              <h3 className="font-semibold text-[#f0f0f8] mb-4">
+                What this covers
+              </h3>
+              <ul className="space-y-3">
+                {bullets.map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-2.5 text-sm text-[#9aa3b2]"
                   >
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </div>
-              </Link>
-            ))}
+                    <span className="mt-1 text-[#8b7cf8] shrink-0 select-none">
+                      •
+                    </span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* How I work */}
+            <div>
+              <h3 className="font-semibold text-[#f0f0f8] mb-4">How I work</h3>
+              <div className="space-y-4 text-sm text-[#9aa3b2] leading-relaxed">
+                <p>
+                  I focus on the{" "}
+                  <strong className="text-[#8b7cf8] font-semibold">
+                    highest-leverage areas first
+                  </strong>{" "}
+                  — not generic playbooks. For most early-stage teams this
+                  means identifying where users drop off and where the numbers
+                  are unclear to investors.
+                </p>
+                <p>
+                  Most clients see{" "}
+                  <strong className="text-[#8b7cf8] font-semibold">
+                    meaningful progress within the first month
+                  </strong>
+                  : a working financial model, growth metrics that tell a
+                  story, and reporting that builds investor confidence.
+                </p>
+                <p>
+                  I work embedded in your team (Slack/calls), handle things
+                  end-to-end, and never hand off a deliverable without the
+                  context to act on it.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Pricing */}
+          <div className="border-t border-white/10 pt-6 flex items-center justify-between">
+            <div>
+              <p className="text-xl font-bold text-[#f0f0f8]">€600 / day</p>
+              <p className="text-[#7a8499] text-sm mt-0.5">
+                Typically 2–4 days / month
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="px-6 py-3 rounded-full bg-[#8b7cf8] text-white font-semibold text-sm hover:bg-[#7c6de8] transition-colors"
+            >
+              Let&apos;s get started
+            </Link>
+          </div>
+        </section>
+
+        {/* Logo grid */}
+        <LogoGrid />
+      </div>
     </main>
   );
 }
