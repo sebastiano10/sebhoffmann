@@ -1,42 +1,62 @@
 "use client";
 
-type Logo =
-  | { name: string; src: string; text?: false }
-  | { name: string; src?: undefined; text: true };
+type Filter = "invert" | "invertWhiteBg" | "plain";
 
-const logos: Logo[] = [
-  { name: "Moss", src: "/logos/moss.png" },
-  { name: "DAZN", src: "/logos/dazn.svg" },
-  { name: "Chilli Chan's", src: "/logos/chillichans.png" },
-  { name: "Pentahotels", src: "/logos/pentahotels.svg" },
-  { name: "STACH Food", text: true },
-  { name: "Startupbootcamp", src: "/logos/startupbootcamp.svg" },
-  { name: "CoinMirror", text: true },
-  { name: "86 Mayo", text: true },
+interface Logo {
+  name: string;
+  src: string;
+  filter: Filter;
+  cls?: string;
+}
+
+// invert         = transparent bg logo  → brightness(0) invert(1) → crisp white mark
+// invertWhiteBg  = white/light bg logo  → grayscale + invert → mark on near-invisible dark bg
+// plain          = dark/black bg logo   → no filter, bg blends into page
+const row1: Logo[] = [
+  { name: "Moss",            src: "/logos/moss.png",            filter: "invert" },
+  { name: "DAZN",            src: "/logos/dazn.svg",            filter: "invert" },
+  { name: "Chilli Chan's",   src: "/logos/chillichans.png",     filter: "invert" },
+  { name: "Pentahotels",     src: "/logos/pentahotels.svg",     filter: "invert" },
+  { name: "Startupbootcamp", src: "/logos/startupbootcamp.svg", filter: "invert" },
+  { name: "86 Mayo",         src: "/logos/86mayo.svg",          filter: "invert" },
 ];
+
+const row2: Logo[] = [
+  { name: "STACH Food",  src: "/logos/stach.png",          filter: "invertWhiteBg" },
+  { name: "CoinMirror",  src: "/logos/coinmirror.png",     filter: "invertWhiteBg" },
+  { name: "cap+matcher", src: "/logos/capmatcher.jpg",     filter: "invertWhiteBg", cls: "h-10" },
+  { name: "IXDS",        src: "/logos/ixds.png",           filter: "plain" },
+  { name: "TrueProfile", src: "/logos/trueprofile.avif",   filter: "invertWhiteBg" },
+];
+
+const filterStyle: Record<Filter, string> = {
+  invert:        "brightness(0) invert(1)",
+  invertWhiteBg: "grayscale(1) invert(1)",
+  plain:         "none",
+};
+
+function LogoRow({ logos }: { logos: Logo[] }) {
+  return (
+    <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 items-center">
+      {logos.map((logo) => (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          key={logo.name}
+          src={logo.src}
+          alt={logo.name}
+          className={`${logo.cls ?? "h-7"} w-auto max-w-[150px] opacity-40 hover:opacity-70 transition-opacity`}
+          style={{ filter: filterStyle[logo.filter] }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function LogoGrid() {
   return (
-    <div className="grid grid-cols-4 gap-x-10 gap-y-8 items-center justify-items-center">
-      {logos.map((logo) =>
-        logo.text ? (
-          <span
-            key={logo.name}
-            className="text-[#7a8499] text-xs font-semibold tracking-widest uppercase opacity-50 hover:opacity-75 transition-opacity text-center"
-          >
-            {logo.name}
-          </span>
-        ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            key={logo.name}
-            src={logo.src}
-            alt={logo.name}
-            className="h-7 w-auto max-w-[130px] opacity-40 hover:opacity-70 transition-opacity"
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
-        )
-      )}
+    <div className="space-y-6">
+      <LogoRow logos={row1} />
+      <LogoRow logos={row2} />
     </div>
   );
 }
