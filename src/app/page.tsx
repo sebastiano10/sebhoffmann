@@ -6,15 +6,15 @@ import LogoGrid from "@/components/LogoGrid";
 export const metadata: Metadata = {
   title: "Seb Hoffmann — Finance & Growth",
   description:
-    "I help early-stage startups grow revenue and build the financial infrastructure to sustain it — without two senior hires.",
+    "I help early-stage startups grow revenue and build the financial infrastructure to sustain it",
 };
 
 const bullets = [
   "Product-led growth strategy and execution",
-  "Growth analytics, KPIs, and experimentation frameworks",
+  "Growth analytics, KPIs, and experimentation",
   "Financial modelling and cash flow forecasting",
-  "Monthly KPI and investor reporting",
-  "Fundraising prep: data rooms, metrics, pitch narrative",
+  "KPI and investor reporting",
+  "Fundraising prep: data room, metrics, pitch narrative",
   "Hands-on advisory for early founding teams",
 ];
 
@@ -40,7 +40,7 @@ export default function Home() {
               </h1>
               <p className="text-[#7a8499] text-sm mt-0.5 max-w-sm leading-snug">
                 I help early-stage startups grow revenue and build the financial
-                infrastructure to sustain it — without two senior hires.
+                infrastructure to sustain it - without two senior hires.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
               Finance &amp; Growth Retainer
             </h2>
             <span className="px-3 py-1 rounded-full bg-[#8b7cf8]/10 border border-[#8b7cf8]/20 text-[#8b7cf8] text-xs font-semibold">
-              Available now
+              Limited availability
             </span>
           </div>
 
@@ -93,7 +93,7 @@ export default function Home() {
                   <strong className="text-[#8b7cf8] font-semibold">
                     highest-leverage areas first
                   </strong>{" "}
-                  — not generic playbooks. For most early-stage teams this
+                  - not generic playbooks. For most early-stage teams this
                   means identifying where users drop off and where the numbers
                   are unclear to investors.
                 </p>
@@ -102,11 +102,11 @@ export default function Home() {
                   <strong className="text-[#8b7cf8] font-semibold">
                     meaningful progress within the first month
                   </strong>
-                  : a working financial model, growth metrics that tell a
+                  : a working financial model, measured growth metrics that tell a
                   story, and reporting that builds investor confidence.
                 </p>
                 <p>
-                  I work embedded in your team (Slack/calls), handle things
+                  I work embedded in your team, handle things
                   end-to-end, and never hand off a deliverable without the
                   context to act on it.
                 </p>
@@ -119,7 +119,7 @@ export default function Home() {
             <div>
               <p className="text-xl font-bold text-[#f0f0f8]">€600 / day</p>
               <p className="text-[#7a8499] text-sm mt-0.5">
-                Typically 2–4 days / month
+                Typically 2–3 days / month
               </p>
             </div>
             <Link
