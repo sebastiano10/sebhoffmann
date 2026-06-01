@@ -4,18 +4,18 @@ import Link from "next/link";
 import LogoGrid from "@/components/LogoGrid";
 
 export const metadata: Metadata = {
-  title: "Seb Hoffmann — Finance & Growth",
+  title: "Seb Hoffmann — AI Builder",
   description:
-    "I help early-stage startups grow revenue and build the financial infrastructure to sustain it",
+    "I help small businesses and early-stage startups run leaner by building custom AI tools and automating the work that slows them down.",
 };
 
 const bullets = [
-  "Product-led growth strategy and execution",
-  "Growth analytics, KPIs, and experimentation",
-  "Financial modelling and cash flow forecasting",
-  "KPI and investor reporting",
-  "Fundraising prep: data room, metrics, pitch narrative",
-  "Hands-on advisory for early founding teams",
+  "Custom AI tools built around your specific workflows",
+  "End-to-end workflow automation - eliminating manual, repetitive tasks",
+  "Identifying the highest-ROI areas to apply AI in your business",
+  "AI-assisted customer communication, support, and operations",
+  "Hands-on building. No slides, no high-level advice",
+  "Support and iteration as your needs grow",
 ];
 
 export default function Home() {
@@ -39,8 +39,8 @@ export default function Home() {
                 Seb Hoffmann
               </h1>
               <p className="text-[#7a8499] text-sm mt-0.5 max-w-sm leading-snug">
-                I help early-stage startups grow revenue and build the financial
-                infrastructure to sustain it - without two senior hires.
+                I help small businesses and startups run leaner and move faster
+                — building AI tools and automating the work eating your team&apos;s time.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
         <section className="rounded-2xl border border-white/10 bg-[#0d0d1a] p-8 mb-16">
           <div className="flex items-center gap-3 mb-8">
             <h2 className="text-xl font-bold text-[#f0f0f8]">
-              Finance &amp; Growth Retainer
+              AI Builder Retainer
             </h2>
             <span className="px-3 py-1 rounded-full bg-[#8b7cf8]/10 border border-[#8b7cf8]/20 text-[#8b7cf8] text-xs font-semibold">
               Limited availability
@@ -89,26 +89,26 @@ export default function Home() {
               <h3 className="font-semibold text-[#f0f0f8] mb-4">How I work</h3>
               <div className="space-y-4 text-sm text-[#9aa3b2] leading-relaxed">
                 <p>
-                  I focus on the{" "}
+                  I start by finding the{" "}
                   <strong className="text-[#8b7cf8] font-semibold">
-                    highest-leverage areas first
+                    highest-leverage bottlenecks first
                   </strong>{" "}
-                  - not generic playbooks. For most early-stage teams this
-                  means identifying where users drop off and where the numbers
-                  are unclear to investors.
+                  — not off-the-shelf templates. For most small businesses this
+                  means pinpointing where hours disappear into manual work and
+                  where a well-built AI tool can reclaim that time entirely.
                 </p>
                 <p>
                   Most clients see{" "}
                   <strong className="text-[#8b7cf8] font-semibold">
-                    meaningful progress within the first month
+                    real operational change within the first month
                   </strong>
-                  : a working financial model, measured growth metrics that tell a
-                  story, and reporting that builds investor confidence.
+                  : automations running, tools deployed, and time freed up —
+                  often the equivalent of a part-time hire.
                 </p>
                 <p>
-                  I work embedded in your team, handle things
-                  end-to-end, and never hand off a deliverable without the
-                  context to act on it.
+                  I work embedded in your operations, deliver everything
+                  end-to-end, and never hand off a tool without making sure
+                  your team can actually use it.
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function Home() {
             <div>
               <p className="text-xl font-bold text-[#f0f0f8]">€600 / day</p>
               <p className="text-[#7a8499] text-sm mt-0.5">
-                Typically 2–3 days / month
+                Typically 2–4 days / month
               </p>
             </div>
             <Link
