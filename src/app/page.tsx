@@ -6,16 +6,16 @@ import LogoGrid from "@/components/LogoGrid";
 export const metadata: Metadata = {
   title: "Seb Hoffmann — AI Builder",
   description:
-    "I help small businesses and early-stage startups run leaner by building custom AI tools and automating the work that slows them down.",
+    "I assess where AI can move the needle in your business, then build and deploy the tools that make it happen.",
 };
 
 const bullets = [
-  "Custom AI tools built around your specific workflows",
-  "End-to-end workflow automation - eliminating manual, repetitive tasks",
-  "Identifying the highest-ROI areas to apply AI in your business",
-  "AI-assisted customer communication, support, and operations",
+  "Custom AI tools built around how your business actually works",
+  "End-to-end workflow automation that eliminates manual, repetitive tasks",
+  "Pinpointing the highest-ROI opportunities to apply AI in your operations",
+  "AI-powered customer communication, support, and operations",
   "Hands-on building. No slides, no high-level advice",
-  "Support and iteration as your needs grow",
+  "Ongoing support and iteration as your needs evolve",
 ];
 
 export default function Home() {
@@ -39,8 +39,8 @@ export default function Home() {
                 Seb Hoffmann
               </h1>
               <p className="text-[#7a8499] text-sm mt-0.5 max-w-sm leading-snug">
-                I help small businesses and startups run leaner and move faster
-                — building AI tools and automating the work eating your team&apos;s time.
+                I figure out exactly where AI can have the biggest impact in your
+                business, then build and ship the tools that make it real.
               </p>
             </div>
           </div>
@@ -89,21 +89,21 @@ export default function Home() {
               <h3 className="font-semibold text-[#f0f0f8] mb-4">How I work</h3>
               <div className="space-y-4 text-sm text-[#9aa3b2] leading-relaxed">
                 <p>
-                  I start by finding the{" "}
+                  I start by assessing your operations to find the{" "}
                   <strong className="text-[#8b7cf8] font-semibold">
                     highest-leverage bottlenecks first
-                  </strong>{" "}
-                  — not off-the-shelf templates. For most small businesses this
-                  means pinpointing where hours disappear into manual work and
-                  where a well-built AI tool can reclaim that time entirely.
+                  </strong>
+                  , not off-the-shelf templates. That means pinpointing exactly
+                  where hours disappear into manual work and where a purpose-built
+                  AI tool can reclaim that time entirely.
                 </p>
                 <p>
                   Most clients see{" "}
                   <strong className="text-[#8b7cf8] font-semibold">
                     real operational change within the first month
                   </strong>
-                  : automations running, tools deployed, and time freed up —
-                  often the equivalent of a part-time hire.
+                  : automations running, tools deployed, and time freed up.
+                  Often the equivalent of a part-time hire.
                 </p>
                 <p>
                   I work embedded in your operations, deliver everything
